@@ -1,0 +1,9 @@
+{
+  "short_name": "GraphQL Notes",
+  "name": "Note application with React-GraqhQL-Express",
+  "icons": [],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
