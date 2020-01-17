@@ -41,10 +41,12 @@ const AllNotes = () => {
     
     if ( loading ) return 'Loading...'
     if (error) return (`Error while fetching Notes: ${error}`) 
-    
+
     return (
-        <div className='container m-t-20'>
+        <div className='container m-t-20' style={{textAlign: 'center'}}>
             <h1 className='page-title'>All Notes</h1>
+        
+            {data.allNotes.length === 0 ? (<div>No notes yet</div>) : 
 
             <div className='allnotes-page'>
                 <div className='columns is-multiline'>
@@ -79,8 +81,9 @@ const AllNotes = () => {
                     ))}
                 </div>
             </div>
+            }
         </div>
-    )
+     )
 }
 
 export default AllNotes

@@ -10,7 +10,7 @@ class App extends React.Component{
     return (
       <Router>
         <div>
-          <nav className='navbar App-header' role='navigator' aria-label='main navigation'>
+          <nav className='navbar App-header' aria-label='main navigation'>
             <div className='navbar-brand'>
               <Link to='/' className='navbar-item'>
                 Notes App
