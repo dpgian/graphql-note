@@ -2,6 +2,7 @@ import express from 'express';
 import graphlHTTP from 'express-graphql';
 import mongoose from 'mongoose';
 import schema from './schema';
+import cors from 'cors'
 
 const dburi = 'mongodb+srv://dpgian:notepassword@note-db-5xspy.mongodb.net/test?retryWrites=true&w=majority'
 
@@ -23,9 +24,7 @@ connectDB()
 const app = express()
 const PORT = 4000
 
-app.listen(PORT, () => {
-    console.log(`Server running on ${PORT}`)
-})
+app.use(cors())
 
 // Server routes
 
@@ -42,3 +41,7 @@ app.use('/graphql', graphlHTTP({
     graphiql: true
     })
 )
+
+app.listen(PORT, () => {
+    console.log(`Server running on ${PORT}`)
+})
